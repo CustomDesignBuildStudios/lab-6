@@ -4,13 +4,7 @@ def encode(data):
         #Checks if letter is a number and is near the end, if value is 7,8,9 it turns into 0,1,2
         if ord(letter) <= 57 and ord(letter) >= 55:
             encode_data += chr(ord(letter) + 3 - 10)
-        #Checks if letter is near the end, if value is X,Y,Z it turns into A,B,C
-        elif ord(letter) <= 122 and ord(letter) >= 120:
-            encode_data += chr(ord(letter) + 3 - 26)
-        #Checks if letter is near the end, if value is x,y,z it turns into a,b,c
-        elif ord(letter) <= 90 and ord(letter) >= 88:
-            encode_data += chr(ord(letter) + 3 - 26)
-        #Letter or number is not near the end 
+        #number is not near the end 
         else:
             encode_data += chr(ord(letter) + 3)
     return encode_data
