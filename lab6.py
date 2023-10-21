@@ -8,9 +8,15 @@ def encode(data):
         else:
             encode_data += chr(ord(letter) + 3)
     return encode_data
+    
+
 def decode(data):
     #implement decoder logic
-    return data
+    password = ""
+    for digit in data:
+        shifted_digit = str((int(digit) - 3) % 10)
+        password += shifted_digit
+    return password
 
 
 def main():
